@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7F7FE;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.lbl, .btn,h1,h4,p {
+    margin: 0;
+}
+
+.page-title {
+    font-size: 32px;
+    line-height: 39px;
+    color: #6E728E;
+    padding: 71px 0 30px;
+}
+
+.lbl {
+    font-size: 15px;
+    line-height: 28px;
+    color: #6E728E;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.subtitle {
+    font-size: 15px;
+    line-height: 28px;
+    color: #6E728E;
+    opacity: 0.5;
+}
+
+.toggle-container label {
+    background-image: linear-gradient(
+     to right,
+     hsl(236, 72%, 79%),
+     hsl(237, 63%, 64%)
+    );
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    height: 30px;
+    width: 60px;
+}
+
+.toggle-container label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    height: 25px;
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-container input {
+    position: absolute;
+    left: -9999px;
+}
+.toggle-container input:checked + label .ball {
+    transform: translateX(30px);
+}
+
+.toggle-container label:hover {
+    background: #C5C7F4;
+}
+
+.card-list {
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 453px;
+    border: 0;
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    margin: 16px 0;
+}
+
+.line {
+    border: 1px solid #6E728E;
+    width: 288px;
+    opacity: 0.25;
+}
+
+.card h4 {
+    font-size: 18px;
+    line-height: 28px;
+    color: #6E728E;
+    padding: 31px 0 24px;
+}
+
+.card h1 {
+    font-size: 72px;
+    line-height: 71px;
+    letter-spacing: -2.16px;
+    color: #4A4D60;
+    display: flex; 
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.card h1::before {
+    content: "$";
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 28px;
+    color: #6E728E;
+    padding: 12px 0 12px;
+}
+
+.card button {
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    width: 288px;
+    color: #fff;
+    padding: 9px;
+    margin-top: 32px;
+}
+
+.card button:hover {
+    background: #fff;
+    color: #7175E0;
+    border: 1px solid #6D72DE;
+    transition: 0.5s;
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    height: 500px;
+    padding: 25px 0 25px;
+}
+
+.card:nth-child(2) button {
+    color: #7175E0;
+    background: #fff;
+}
+
+.card:nth-child(2) button:hover {
+    background: #7175E0;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@media only screen and (max-width: 800px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    } 
+} 
